@@ -5,26 +5,18 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject block;
-    public float maxX;
-    public Transform spawnPoint;
-    public float spawnRate;
-    public float firstSpawn;
-
+    [SerializeField] GameObject block;
+    [SerializeField] float maxX;
+    [SerializeField] Transform spawnPoint;
+    [SerializeField] float spawnRate;
+    [SerializeField] float firstSpawn;
 
     bool gameStarted = false;
 
-    public GameObject tapToStart;
-    public TextMeshProUGUI scoreText;
+    [SerializeField] GameObject tapToStart;
+    [SerializeField] TextMeshProUGUI scoreText;
 
     int score = 0;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -34,8 +26,7 @@ public class GameManager : MonoBehaviour
             StartSpawning();
             gameStarted = true;
             tapToStart.SetActive(false);
-        }
-        
+        }        
     }
 
 
