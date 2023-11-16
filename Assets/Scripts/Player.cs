@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public float moveSpeed;
+    [SerializeField] float moveSpeed;
     Rigidbody2D playerRigidbody;
 
 
